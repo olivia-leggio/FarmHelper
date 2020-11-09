@@ -1,0 +1,5 @@
+interact with an animal and have it teleport to a defined point
+eg. /setfarm saves coordinates to teleport to
+/transport activates the teleportation mode
+	maybe anything you right click while in that mode teleports
+/done ends that mode

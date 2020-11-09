@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="FarmHelper:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/</output-path>
+    <root id="archive" name="FarmHelper.jar">
+      <element id="module-output" name="FarmHelper" />
+    </root>
+  </artifact>
+</component>

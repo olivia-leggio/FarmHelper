@@ -1,0 +1,4 @@
+name: FarmHelper
+main: com.worminthedirt.farmhelper.FarmHelper
+version: 0.1
+description: a server plugin to make farming easier
