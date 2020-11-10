@@ -12,4 +12,8 @@ public class FarmHelper extends JavaPlugin {
     public void onDisable() {
         getLogger().info("FarmHelper disabled :(");
     }
+
+    private void loadCommands() {
+        this.getCommand("hi").setExecutor(new Hai());
+    }
 }

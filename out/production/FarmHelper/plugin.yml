@@ -2,3 +2,8 @@ name: FarmHelper
 main: com.worminthedirt.farmhelper.FarmHelper
 version: 0.1
 description: a server plugin to make farming easier
+commands:
+  hi:
+    description: replies to player in chat
+    usage: /<command>
+    aliases: hai
