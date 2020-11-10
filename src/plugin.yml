@@ -5,5 +5,5 @@ description: a server plugin to make farming easier
 commands:
   hi:
     description: dummy command for testing, replies to user in chat
-    usage: /<command>
+    usage: /<command> <color>
     aliases: hai

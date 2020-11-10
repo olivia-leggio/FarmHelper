@@ -4,6 +4,6 @@ version: 0.1
 description: a server plugin to make farming easier
 commands:
   hi:
-    description: replies to player in chat
-    usage: /<command>
+    description: dummy command for testing, replies to user in chat
+    usage: /<command> <color>
     aliases: hai
