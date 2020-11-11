@@ -1,13 +1,14 @@
 package com.worminthedirt.farmhelper;
 
+import com.worminthedirt.farmhelper.events.Events;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class FarmHelper extends JavaPlugin {
     @Override
     public void onEnable() {
-        getLogger().info("FarmHelper enabled!");
-
         loadCommands();
+        getServer().getPluginManager().registerEvents(new Events(), this);
+        getLogger().info("FarmHelper enabled!");
     }
 
     @Override

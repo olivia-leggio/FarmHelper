@@ -3,3 +3,7 @@ eg. /setfarm saves coordinates to teleport to
 /transport activates the teleportation mode
 	maybe anything you right click while in that mode teleports
 /done ends that mode
+
+plant whole row of crops at once
+babyify animals lol
+breed all in a selected area?

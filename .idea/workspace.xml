@@ -7,10 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1ba88cfe-f7f8-4665-9c4b-c025f036f874" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/worminthedirt/farmhelper/events/Events.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ideas.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ideas.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/FarmHelper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FarmHelper.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/worminthedirt/farmhelper/Hai.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/worminthedirt/farmhelper/Hai.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/plugin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/worminthedirt/farmhelper/FarmHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/worminthedirt/farmhelper/FarmHelper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
