@@ -7,3 +7,7 @@ commands:
     description: dummy command for testing, replies to user in chat
     usage: /<command> <color>
     aliases: hai
+
+  setfarm:
+    description: sets a new farm teleport point
+    usage: /<command> <name>

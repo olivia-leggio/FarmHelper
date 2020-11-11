@@ -1,4 +1,4 @@
-package com.worminthedirt.farmhelper;
+package com.worminthedirt.farmhelper.commands;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
