@@ -10,6 +10,8 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
 
+
+//saves a new farm teleport point
 public class SetFarm implements CommandExecutor {
     private Plugin plugin = FarmHelper.getPlugin(FarmHelper.class);
 
@@ -41,6 +43,7 @@ public class SetFarm implements CommandExecutor {
         catch (Exception e) {
             player.sendMessage(ChatColor.DARK_RED + "could not save farm!");
             player.sendMessage(ChatColor.DARK_RED + e.toString());
+            return false;
         }
 
         return true;

@@ -11,3 +11,7 @@ commands:
   setfarm:
     description: sets a new farm teleport point
     usage: /<command> <name>
+
+  listfarms:
+    description: lists all the saved farms the user has
+    usage: /<command>
