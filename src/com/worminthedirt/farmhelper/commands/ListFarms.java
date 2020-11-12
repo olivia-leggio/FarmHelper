@@ -6,10 +6,8 @@ import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
-import java.util.Set;
 
 //sends a list of the users saved farm points in chat
 public class ListFarms implements CommandExecutor {
@@ -22,17 +20,16 @@ public class ListFarms implements CommandExecutor {
             return false;
         }
         Player player = (Player) sender;
-        ConfigurationSection cs = plugin.getConfig().getConfigurationSection("Farms." + player.getUniqueId());
-        Object[] farmsArray = cs.getKeys(false).toArray();
 
         try {
-            for (int i = 0; i < farmsArray.length; i++) {
-                sender.sendMessage(ChatColor.YELLOW + farmsArray[i].toString());
+            for (String farm : plugin.getConfig().getConfigurationSection("Farms." + player.getUniqueId()).getKeys(false)) {
+                player.sendMessage(ChatColor.YELLOW + farm);
             }
         }
         catch (Exception e) {
             player.sendMessage(ChatColor.DARK_RED + "could not list your farms!");
             player.sendMessage(ChatColor.DARK_RED + e.toString());
+            return false;
         }
         return true;
     }
