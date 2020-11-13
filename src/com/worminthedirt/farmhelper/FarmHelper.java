@@ -29,5 +29,6 @@ public class FarmHelper extends JavaPlugin {
 
     private void loadConfigs() {
         getConfig().options().copyDefaults(true);
+        saveConfig();
     }
 }

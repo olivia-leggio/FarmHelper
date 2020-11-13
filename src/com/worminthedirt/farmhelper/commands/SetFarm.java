@@ -22,16 +22,26 @@ public class SetFarm implements CommandExecutor {
             return false;
         }
         Player player = (Player) sender;
+        try {
+            if (plugin.getConfig().getConfigurationSection("Farms." + player.getUniqueId()).contains(args[0])) {
+                player.sendMessage(ChatColor.DARK_RED + "you already have a farm with that name!");
+                return false;
+            }
+        }
+        catch (Exception e) {
+            ;
+        }
+
         Location playerLoc = player.getLocation();
 
         String farmName = args[0];
-        World world = playerLoc.getWorld();
+        //World world = playerLoc.getWorld();
         int X = playerLoc.getBlockX();
         int Y = playerLoc.getBlockY();
         int Z = playerLoc.getBlockZ();
 
         String path = "Farms." + player.getUniqueId() + "." + farmName;
-        plugin.getConfig().set(path + ".world", world);
+        //plugin.getConfig().set(path + ".world", world);
         plugin.getConfig().set(path + ".X", X);
         plugin.getConfig().set(path + ".Y", Y);
         plugin.getConfig().set(path + ".Z", Z);
