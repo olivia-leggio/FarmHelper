@@ -22,7 +22,7 @@ public class Events implements Listener {
     public static void onCamillaJoin(PlayerJoinEvent event) {
         Player player = event.getPlayer();
         if (player.getDisplayName().equals("roundfrog69")) {
-            player.sendMessage(ChatColor.LIGHT_PURPLE + "hi babyyy xoxo <3 ;)");
+            player.sendMessage(ChatColor.LIGHT_PURPLE + "hi babyyy xoxo <3 ;)  -Olivia");
         }
         else {
             player.sendMessage(ChatColor.DARK_RED + "welcome.. i guess ... ://");
@@ -38,7 +38,7 @@ public class Events implements Listener {
             if (player.getInventory().getItemInMainHand().getType() == Material.AIR) {
                 String farmName = plugin.getConfig().getString("Selections." + player.getUniqueId(), "NONE");
                 if (farmName.equals("NONE")) {
-                    player.sendMessage(ChatColor.YELLOW + "you must select a valid farm before teleporting!");
+                    player.sendMessage(ChatColor.YELLOW + "[FarmHelper] you must select a valid farm before teleporting!");
                 }
                 String path = "Farms." + player.getUniqueId() + "." + farmName;
 

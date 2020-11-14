@@ -1,20 +1,30 @@
 name: FarmHelper
 main: com.worminthedirt.farmhelper.FarmHelper
-version: 0.3
+version: 1.0
 description: a server plugin to make farming easier
 commands:
-  hi:
-    description: dummy command for testing, replies to user in chat
-    usage: /<command> <color>
-    aliases: hai
 
   setfarm:
     description: sets a new farm teleport point
     usage: /<command> <name>
 
   listfarms:
-    description: lists all the saved farms the user has
+    description: lists user's saved farms
     usage: /<command>
-  select:
-    description: selects which farm you want to teleport animals to
+
+  selectfarm:
+    description: selects farm to teleport to
     usage: /<command> <name>
+
+  deletefarm:
+    description: deletes the given farm
+    usage: /<command> <name>
+
+  updatefarm:
+    description: updates farm location
+    usage: /<command> <name>
+
+  hi:
+    description: says hi to the user
+    usage: /<command> <color>
+    aliases: hai

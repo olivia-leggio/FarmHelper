@@ -2,6 +2,7 @@ package com.worminthedirt.farmhelper.commands;
 
 
 import com.worminthedirt.farmhelper.FarmHelper;
+import com.worminthedirt.farmhelper.utils.GeneralUtils;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -9,14 +10,14 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
 
-//sends a list of the users saved farm points in chat
+//sends a list of the player's saved farm points in chat
 public class ListFarms implements CommandExecutor {
     private Plugin plugin = FarmHelper.getPlugin(FarmHelper.class);
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String s, String[] args) {
         if (!(sender instanceof Player)) {
-            sender.sendMessage(ChatColor.DARK_RED + "you must be a player to use this command!");
+            sender.sendMessage(ChatColor.DARK_RED + "[FarmHelper] you must be a player to use this command!");
             return false;
         }
         Player player = (Player) sender;
@@ -27,8 +28,8 @@ public class ListFarms implements CommandExecutor {
             }
         }
         catch (Exception e) {
-            player.sendMessage(ChatColor.DARK_RED + "could not list your farms!");
-            player.sendMessage(ChatColor.DARK_RED + e.toString());
+            player.sendMessage(ChatColor.DARK_RED + "[FarmHelper] could not list your farms!");
+            GeneralUtils.toConsole(e.toString());
             return false;
         }
         return true;

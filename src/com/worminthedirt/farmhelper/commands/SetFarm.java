@@ -1,6 +1,7 @@
 package com.worminthedirt.farmhelper.commands;
 
 import com.worminthedirt.farmhelper.FarmHelper;
+import com.worminthedirt.farmhelper.utils.GeneralUtils;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.World;
@@ -18,13 +19,13 @@ public class SetFarm implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String s, String[] args) {
         if (!(sender instanceof Player)) {
-            sender.sendMessage(ChatColor.DARK_RED + "you must be a player to use this command!");
+            sender.sendMessage(ChatColor.DARK_RED + "[FarmHelper] you must be a player to use this command!");
             return false;
         }
         Player player = (Player) sender;
         try {
             if (plugin.getConfig().getConfigurationSection("Farms." + player.getUniqueId()).contains(args[0])) {
-                player.sendMessage(ChatColor.DARK_RED + "you already have a farm with that name!");
+                player.sendMessage(ChatColor.DARK_RED + "[FarmHelper] you already have a farm with that name!");
                 return false;
             }
         }
@@ -48,11 +49,11 @@ public class SetFarm implements CommandExecutor {
 
         try {
             plugin.saveConfig();
-            player.sendMessage(ChatColor.GREEN + "saved " + farmName);
+            player.sendMessage(ChatColor.GREEN + "[FarmHelper] saved " + farmName);
         }
         catch (Exception e) {
-            player.sendMessage(ChatColor.DARK_RED + "could not save farm!");
-            player.sendMessage(ChatColor.DARK_RED + e.toString());
+            player.sendMessage(ChatColor.DARK_RED + "[FarmHelper] could not save farm!");
+            GeneralUtils.toConsole(e.toString());
             return false;
         }
 

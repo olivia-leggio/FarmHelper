@@ -1,6 +1,6 @@
 test error handling for existing commands
 
-command that returns the name of the selected farm
-delete farm command
-readme for version 1.0 :)))
-custom item for teleporting
+create farm from coordinates
+custom item for causing teleporting
+
+command that returns the name of the selected farm??

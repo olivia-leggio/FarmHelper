@@ -1,6 +1,6 @@
 name: FarmHelper
 main: com.worminthedirt.farmhelper.FarmHelper
-version: 1.0
+version: 0.3
 description: a server plugin to make farming easier
 commands:
   hi:
@@ -15,6 +15,15 @@ commands:
   listfarms:
     description: lists all the saved farms the user has
     usage: /<command>
-  select:
+
+  selectfarm:
     description: selects which farm you want to teleport animals to
+    usage: /<command> <name>
+
+  deletefarm:
+    description: deletes the given farm
+    usage: /<command> <name>
+
+  updatefarm:
+    description: updates the farm location to the players current location
     usage: /<command> <name>

@@ -9,7 +9,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
 
-public class SelectFarm implements CommandExecutor {
+public class DeleteFarm implements CommandExecutor {
     private Plugin plugin = FarmHelper.getPlugin(FarmHelper.class);
 
     @Override
@@ -22,10 +22,10 @@ public class SelectFarm implements CommandExecutor {
 
         try {
             if (plugin.getConfig().getConfigurationSection("Farms." + player.getUniqueId()).contains(args[0])) {
-                String path = "Selections." + player.getUniqueId();
-                plugin.getConfig().set(path, args[0]);
+                String path = "Farms." + player.getUniqueId() + "." + args[0];
+                plugin.getConfig().set(path, null);
                 plugin.saveConfig();
-                player.sendMessage(ChatColor.GREEN + "[FarmHelper] will teleport to " + args[0]);
+                player.sendMessage(ChatColor.GOLD + "[FarmHelper] " + args[0] + " deleted");
             }
             else {
                 player.sendMessage(ChatColor.YELLOW + "[FarmHelper] you don't have a farm named " + args[0] + "!");

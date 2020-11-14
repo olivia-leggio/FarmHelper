@@ -3,13 +3,14 @@ package com.worminthedirt.farmhelper.commands;
 import com.worminthedirt.farmhelper.FarmHelper;
 import com.worminthedirt.farmhelper.utils.GeneralUtils;
 import org.bukkit.ChatColor;
+import org.bukkit.Location;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
 
-public class SelectFarm implements CommandExecutor {
+public class UpdateFarm implements CommandExecutor {
     private Plugin plugin = FarmHelper.getPlugin(FarmHelper.class);
 
     @Override
@@ -22,10 +23,14 @@ public class SelectFarm implements CommandExecutor {
 
         try {
             if (plugin.getConfig().getConfigurationSection("Farms." + player.getUniqueId()).contains(args[0])) {
-                String path = "Selections." + player.getUniqueId();
-                plugin.getConfig().set(path, args[0]);
+                String path = "Farms." + player.getUniqueId() + "." + args[0];
+
+                Location loc = player.getLocation();
+                plugin.getConfig().set(path + ".X", loc.getBlockX());
+                plugin.getConfig().set(path + ".Y", loc.getBlockY());
+                plugin.getConfig().set(path + ".Z", loc.getBlockZ());
                 plugin.saveConfig();
-                player.sendMessage(ChatColor.GREEN + "[FarmHelper] will teleport to " + args[0]);
+                player.sendMessage(ChatColor.GREEN + "[FarmHelper] " + args[0] + " updated!");
             }
             else {
                 player.sendMessage(ChatColor.YELLOW + "[FarmHelper] you don't have a farm named " + args[0] + "!");
