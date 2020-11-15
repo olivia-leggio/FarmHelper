@@ -1,4 +1,5 @@
 test error handling for existing commands
+enforce that farm name can't be "NONE"
 
 create farm from coordinates
 custom item for causing teleporting

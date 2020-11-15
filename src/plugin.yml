@@ -24,6 +24,18 @@ commands:
     description: updates farm location
     usage: /<command> <name>
 
+  settp:
+    description: sets a new teleport point
+    usage: /<command> <name>
+
+  listtp:
+    description: lists user's saved tp points
+    usage: /<command>
+
+  tpself:
+    description: teleports the player to the tp point
+    usage: /<command> <tp point name>
+
   hi:
     description: says hi to the user
     usage: /<command> <color>

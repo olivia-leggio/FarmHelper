@@ -26,6 +26,9 @@ public class FarmHelper extends JavaPlugin {
         this.getCommand("selectfarm").setExecutor(new SelectFarm());
         this.getCommand("deletefarm").setExecutor(new DeleteFarm());
         this.getCommand("updatefarm").setExecutor(new UpdateFarm());
+        this.getCommand("settp").setExecutor(new SetTeleport());
+        this.getCommand("listtp").setExecutor(new ListTeleports());
+        this.getCommand("tpself").setExecutor(new TeleportSelf());
     }
 
     private void loadConfigs() {
