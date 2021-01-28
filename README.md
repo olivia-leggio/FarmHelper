@@ -18,11 +18,11 @@ Once a farm is selected, the player can right click on an entity **with an empty
 
 ### Example
 ```
-/setfarm cowPen                     - while standing in your cow enclosure
-/setfarm pigPen                     - while standing in your pig enclosure
-/setfarm chickenPen                 - while standing in your chicken enclosure
-/setfarm sheepPen                   - while standing in your sheep enclosure
+/setfarm cowPen           - while standing in your cow enclosure
+/setfarm pigPen           - while standing in your pig enclosure
+/setfarm chickenPen       - while standing in your chicken enclosure
+/setfarm sheepPen         - while standing in your sheep enclosure
 
-/selectfarm cowPen                  - player then right clicks on a cow and it teleports to the cow enclosure
-/selectfarm sheepPen                - player right clicks on a sheep and it teleports to the sheep enclosure
+/selectfarm cowPen        - player then right clicks on a cow and it teleports to the cow enclosure
+/selectfarm sheepPen      - player right clicks on a sheep and it teleports to the sheep enclosure
 ```
